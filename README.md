@@ -1,2 +1,0 @@
-# Server-Core
-Server Core
