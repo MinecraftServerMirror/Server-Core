@@ -1,9 +1,19 @@
 language: Java
 jdk:
   - oraclejdk8
-branches:
-  only:
-    - master
 script:
   - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
   - java -jar BuildTools.jar --rev latest
+before_deploy:
+  - cd Spigot/Spigot-Server/target
+  - zip -r target.zip target
+  - cd ..
+  - cd ..
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GH_TOKEN}
+  file: "pigot-Server/target/target.zip"
+  skip_cleanup: true
+  on:
+    tags: true
