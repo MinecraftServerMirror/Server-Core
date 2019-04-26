@@ -4,9 +4,8 @@ jdk:
 script:
   - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
   - java -jar BuildTools.jar --rev latest
-  - cd Spigot/Spigot-Server/target
+  - cd Spigot/Spigot-Server/
   - zip -r target.zip target
-  - cd ..
   - cd ..
 deploy:
   provider: releases
