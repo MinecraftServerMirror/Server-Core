@@ -7,11 +7,17 @@ script:
   - cd Spigot/Spigot-Server/
   - zip -r target.zip target
   - cd ..
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "CodeAthena"
+  - git config --local user.email "45529264+CodeAthena@users.noreply.github.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
     secure: ${GH_TOKEN}
-  file: "pigot-Server/target/target.zip"
+  file: "Spigot-Server/target/target.zip"
   skip_cleanup: true
   on:
     tags: true
