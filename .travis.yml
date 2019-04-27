@@ -4,4 +4,4 @@ jdk:
 script:
   - echo "hello"
 notifications:
-  - webhooks: https://cds.console.aliyun.com/trigger/u1/c2VjcmV0PTUyODhlZWMxZGU4MjFhMjQ5NzdiMDY1ODJjMDJiNjc3ZDc3OTMxOTMmJm5hbWU9U3BpZ290LVNlcnZlciYmbmFtZXNwYWNlPTE4MTAxNTUwMDU3MjU5NzcmJnRpbWVTdGFtcD0xNTU2MzQyODgzMTEzJiZicmFuY2g9
+  webhooks: https://cds.console.aliyun.com/trigger/u1/c2VjcmV0PTUyODhlZWMxZGU4MjFhMjQ5NzdiMDY1ODJjMDJiNjc3ZDc3OTMxOTMmJm5hbWU9U3BpZ290LVNlcnZlciYmbmFtZXNwYWNlPTE4MTAxNTUwMDU3MjU5NzcmJnRpbWVTdGFtcD0xNTU2MzQyODgzMTEzJiZicmFuY2g9
