@@ -3,7 +3,7 @@ language:
   - python
 jdk:
   - oraclejdk8
-python：
+python:
   - 3.7
 script:
   - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
