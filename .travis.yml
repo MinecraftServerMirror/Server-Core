@@ -1,12 +1,12 @@
 language: 
   - Java
-  - python
+sudo: true
 jdk:
   - oraclejdk8
-python:
-  - 3.7
 script:
   - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
   - java -jar BuildTools.jar --rev latest
+  - wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+  - tar zxvf  Python-3.7.3.tgz
 notifications:
   webhooks: https://cds.console.aliyun.com/trigger/u1/c2VjcmV0PTUyODhlZWMxZGU4MjFhMjQ5NzdiMDY1ODJjMDJiNjc3ZDc3OTMxOTMmJm5hbWU9U3BpZ290LVNlcnZlciYmbmFtZXNwYWNlPTE4MTAxNTUwMDU3MjU5NzcmJnRpbWVTdGFtcD0xNTU2MzQyODgzMTEzJiZicmFuY2g9
